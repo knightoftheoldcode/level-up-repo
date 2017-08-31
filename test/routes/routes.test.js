@@ -19,7 +19,7 @@ describe('MEAN Template Project', function() {
       request.get(baseUrl + '/').end(function assert(err, res) {
         expect(err).to.not.be.ok;
         expect(res).to.have.property('status', 200);
-        expect(res.text).to.contain(`Welcome to Express`);
+        expect(res.text).to.contain('Welcome to Express');
         done();
       });
     });
