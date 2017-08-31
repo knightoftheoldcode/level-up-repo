@@ -2,17 +2,17 @@ const expect = require('chai').expect;
 const request = require('superagent');
 
 describe('MEAN Template Project', function() {
-//  const serverApp = require('./../../app.js');
+  const serverApp = require('./../../app.js');
   const port = 3000;
   const baseUrl = 'http://localhost:' + port;
 
-//  before(function(done) {
-//    serverApp.start(port, done);
-//  });
+  before(function(done) {
+    serverApp.start(port, done);
+  });
 
-//  after(function(done) {
-//    serverApp.stop(done);
-//  });
+  after(function(done) {
+    serverApp.stop(done);
+  });
 
   describe('when requested at /', function() {
     it('should load', function(done) {

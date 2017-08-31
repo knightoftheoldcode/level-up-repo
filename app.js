@@ -43,5 +43,17 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+const start = function start(port, callback) {
+  server = app.listen(port, callback);
+}
+
+const stop = function stop(callback) {
+  server.close(callback);
+}
+
+module.exports = {
+  app,
+  start,
+  stop
+}
 
